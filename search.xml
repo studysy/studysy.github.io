@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>小程序接入企业微信</title>
+    <url>/2022/03/21/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8E%A5%E5%85%A5%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1/</url>
+    <content><![CDATA[<blockquote>
+<p>注意：注意使用的是独立版，还是联合版<br>    独立版：<a href="https://work.weixin.qq.com/kf">https://work.weixin.qq.com/kf</a><br>    联合版：<a href="https://work.weixin.qq.com/">https://work.weixin.qq.com</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>我使用的为联合版</p>
+</blockquote>
+<ul>
+<li>首先开启API</li>
+<li>设置URL、Token、EncodingAESKey（设置完成之后能够得到Secret）</li>
+<li>案例：<a href="https://pan.baidu.com/s/1cC5GF7ZXSmdy2ANQZjpLTw">https://pan.baidu.com/s/1cC5GF7ZXSmdy2ANQZjpLTw</a> 提取码：sxfq</li>
+</ul>
+<hr>
+<ul>
+<li><p>获取access_token</p>
+<ul>
+<li>请求方式：GET（HTTPS）</li>
+<li>请求URL：<a href="https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ID&amp;corpsecret=SECRET">https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ID&amp;corpsecret=SECRET</a></li>
+<li>参数：corpid（企业ID）corpsecret（应用的凭证密钥）</li>
+<li>返回值：</li>
+</ul>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> &#123;</span><br><span class="line">&quot;errcode&quot;:0,</span><br><span class="line">&quot;errmsg&quot;:&quot;&quot;,</span><br><span class="line">&quot;access_token&quot;: &quot;accesstoken000001&quot;,</span><br><span class="line">&quot;expires_in&quot;: 7200</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<ul>
+<li>通过获取的access_token获取客服帐号列表<ul>
+<li>请求方式: GET(HTTPS)</li>
+<li>请求地址: <a href="https://qyapi.weixin.qq.com/cgi-bin/kf/account/list?access_token=ACCESS_TOKEN">https://qyapi.weixin.qq.com/cgi-bin/kf/account/list?access_token=ACCESS_TOKEN</a></li>
+<li>返回值：<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    &quot;errcode&quot;: 0,</span><br><span class="line">    &quot;errmsg&quot;: &quot;ok&quot;,</span><br><span class="line">	&quot;account_list&quot;: [</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;open_kfid&quot;: &quot;wkAJ2GCAAASSm4_FhToWMFea0xAFfd3Q&quot;,</span><br><span class="line">            &quot;name&quot;: &quot;咨询客服&quot;,</span><br><span class="line">            &quot;avatar&quot;: &quot;https://wework.qpic.cn/wwhead/duc2TvpEgSSjibPZlNR6chpx9W3dtd9Ogp8XEmSNKGa6uufMWn2239HUPuwIFoYYZ7Ph580FPvo8/0&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>通过获取的open_kfid获取客服帐号链接</li>
+<li>请求方式： POST（HTTPS）</li>
+<li>请求地址： <a href="https://qyapi.weixin.qq.com/cgi-bin/kf/add_contact_way?access_token=ACCESS_TOKEN">https://qyapi.weixin.qq.com/cgi-bin/kf/add_contact_way?access_token=ACCESS_TOKEN</a></li>
+<li>请求示例：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	&quot;open_kfid&quot;: &quot;OPEN_KFID&quot;,</span><br><span class="line">    &quot;scene&quot;: &quot;12345&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>返回值</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">   &quot;errcode&quot;: 0,</span><br><span class="line">   &quot;errmsg&quot;: &quot;ok&quot;,</span><br><span class="line">   &quot;url&quot;:&quot;https://work.weixin.qq.com/kf/kfcbf8f8d07ac7215f?enc_scene=ENCGFSDF567DF&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>注：成功获取访问链接，之后即可关闭API，正常的企业微信客服应用就能够使用!</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>日记</category>
+      </categories>
+  </entry>
+</search>
