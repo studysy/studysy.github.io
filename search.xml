@@ -56,4 +56,31 @@
         <category>日记</category>
       </categories>
   </entry>
+  <entry>
+    <title>markdown书写学习内容</title>
+    <url>/2023/01/16/%E6%B5%8B%E8%AF%95%E6%96%87%E6%A1%A3/</url>
+    <content><![CDATA[<h3 id="Markdown简介："><a href="#Markdown简介：" class="headerlink" title="Markdown简介："></a>Markdown简介：</h3><ul>
+<li>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。</li>
+<li>Markdown 语言在 2004 由约翰·格鲁伯（英语：John Gruber）创建。</li>
+<li>Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。</li>
+<li>Markdown 编写的文档后缀为 .md, .markdown。<h3 id="Markdown标题符号："><a href="#Markdown标题符号：" class="headerlink" title="Markdown标题符号："></a>Markdown标题符号：</h3></li>
+<li>&#x3D;和-标记一级和二级标题<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">我是一级标题</span><br><span class="line">===============</span><br><span class="line">我是二级标题</span><br><span class="line">---------------</span><br></pre></td></tr></table></figure>
+<blockquote>
+<blockquote>
+</blockquote>
+<h1 id="我是一级标题"><a href="#我是一级标题" class="headerlink" title="我是一级标题"></a>我是一级标题</h1><p>我是二级标题</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6>]]></content>
+      <categories>
+        <category>markdown笔记</category>
+      </categories>
+  </entry>
 </search>
