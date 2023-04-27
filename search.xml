@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>mysql</title>
+      <link href="/2023/04/27/mysql/"/>
+      <url>/2023/04/27/mysql/</url>
+      
+        <content type="html"><![CDATA[<h2 id="mysql关系型数据库-Relational-Database-Management-System"><a href="#mysql关系型数据库-Relational-Database-Management-System" class="headerlink" title="mysql关系型数据库(Relational Database Management System)"></a>mysql关系型数据库(Relational Database Management System)</h2><h3 id="MySQL-创建数据库"><a href="#MySQL-创建数据库" class="headerlink" title="MySQL 创建数据库"></a>MySQL 创建数据库</h3><ul><li>我们可以在登陆 MySQL 服务后，使用 create 命令创建数据库，语法如下:<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">create database 数据库名称</span><br></pre></td></tr></table></figure></li><li>以下命令简单的演示了创建数据库的过程，数据名为 local:<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//连接数据库</span><br><span class="line">[root@host]# mysql -u root -p   </span><br><span class="line">Enter password:******  # 登录后进入终端</span><br><span class="line">//创建数据库</span><br><span class="line">mysql&gt; create database local;</span><br></pre></td></tr></table></figure></li></ul><h5 id="使用-mysqladmin-创建数据库"><a href="#使用-mysqladmin-创建数据库" class="headerlink" title="使用 mysqladmin 创建数据库"></a>使用 mysqladmin 创建数据库</h5><ul><li>使用普通用户，你可能需要特定的权限来创建或者删除 MySQL 数据库。所以我们这边使用root用户登录，root用户拥有最高权限，可以使用 mysql mysqladmin 命令来创建数据库。以下命令简单的演示了创建数据库的过程，数据名为 RUNOOB:<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//执行成功后会创建 MySQL 数据库 RUNOOB。</span><br><span class="line">[root@host]# mysqladmin -u root -p create local</span><br><span class="line">Enter password:******</span><br><span class="line"></span><br></pre></td></tr></table></figure></li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2023/04/23/hello-world/"/>
       <url>/2023/04/23/hello-world/</url>
