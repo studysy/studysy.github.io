@@ -4,6 +4,82 @@
   
     
     <entry>
+      <title>github命令</title>
+      <link href="/2023/06/01/github%E5%91%BD%E4%BB%A4/"/>
+      <url>/2023/06/01/github%E5%91%BD%E4%BB%A4/</url>
+      
+        <content type="html"><![CDATA[<h3 id="github干货"><a href="#github干货" class="headerlink" title="github干货"></a>github干货</h3><h5 id="github提交代码"><a href="#github提交代码" class="headerlink" title="github提交代码"></a>github提交代码</h5><pre><code><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//原本已经commit的代码由于某些原因（遗忘、断网...）没有提交到远程服务器，导致你没有完成工作</span><br><span class="line">git cherry </span><br><span class="line">git init</span><br><span class="line">git remote add origin https://e.coding.net/lv136194452/gerenziliao/myblod.git</span><br><span class="line">git add -A</span><br><span class="line">git commit</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习总结 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>工具使用汇总</title>
+      <link href="/2023/06/01/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%B1%87%E6%80%BB/"/>
+      <url>/2023/06/01/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%B1%87%E6%80%BB/</url>
+      
+        <content type="html"><![CDATA[<h3 id="VScode"><a href="#VScode" class="headerlink" title="VScode"></a>VScode</h3><ul><li>去除不必要的空格或者注释<ul><li>去空行：^\s*(?&#x3D;\r?$)\n</li><li>去多行：&#x2F;*(.|\r\n|\n)*?*&#x2F;</li><li>去单行：(?&lt;!http:|https:|ftp:|ftps:|file:)//.*</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习总结 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>PHP学习</title>
+      <link href="/2023/06/01/PHP%E5%AD%A6%E4%B9%A0/"/>
+      <url>/2023/06/01/PHP%E5%AD%A6%E4%B9%A0/</url>
+      
+        <content type="html"><![CDATA[<h3 id="请求类问题"><a href="#请求类问题" class="headerlink" title="请求类问题"></a>请求类问题</h3><h5 id="本地跨域请求设置（添加跨域头）"><a href="#本地跨域请求设置（添加跨域头）" class="headerlink" title="本地跨域请求设置（添加跨域头）"></a>本地跨域请求设置（添加跨域头）</h5><pre><code>    <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//请求时先进行options请求看是否存在跨域情况，之后再进行头部请求，为防止产生两次请求，我们在这里阻止options请求</span><br><span class="line">if($_SERVER[&#x27;REQUEST_METHOD&#x27;]==&#x27;OPTIONS&#x27;)&#123;</span><br><span class="line">    return &#x27;error&#x27;;</span><br><span class="line">&#125;</span><br><span class="line">header(&#x27;Access-Control-Allow-Origin: *&#x27;);</span><br><span class="line">header(&#x27;Access-Control-Allow-Headers: *&#x27;);</span><br><span class="line">//运行请求的方法</span><br><span class="line">header(&quot;Access-Control-Allow-Methods: *&quot;);</span><br></pre></td></tr></table></figure></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习总结 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>go学习</title>
+      <link href="/2023/06/01/go%E5%AD%A6%E4%B9%A0/"/>
+      <url>/2023/06/01/go%E5%AD%A6%E4%B9%A0/</url>
+      
+        <content type="html"><![CDATA[<h3 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h3><ul><li>Go官网下载地址：<a href="https://golang.org/dl/">https://golang.org/dl/</a> (打开有点慢)<ul><li>一定要记住安装位置</li></ul></li></ul><h3 id="配置GOPATH"><a href="#配置GOPATH" class="headerlink" title="配置GOPATH"></a>配置GOPATH</h3><ul><li>GOPATH是一个环境变量，用来表明你写的go项目的存放路径</li><li>GOPATH路径最好只设置一个，所有的项目代码都放到GOPATH的src目录下。</li></ul><h5 id="windows设置环境变量"><a href="#windows设置环境变量" class="headerlink" title="windows设置环境变量"></a>windows设置环境变量</h5><ul><li>我的电脑-&gt;属性-&gt;高级系统设置<ul><li>检查一下你的电脑里面是否存在<code>GOPATH</code>并且设置值为你要存<code>go</code>代码的目录</li><li>如果没有新建一个<code>GOPATH</code>，同时将值设置为你<code>go</code>项目的根目录</li><li>同时在<code>path</code>里面添加<code>go</code>的安装目录和<code>GOPATH</code>目录(自我感觉有异议，直接配置环境变量<code>path</code>可能就会好用，我的本地是直接配置的<code>path</code>变量)</li></ul></li></ul><h3 id="第一个go程序"><a href="#第一个go程序" class="headerlink" title="第一个go程序"></a>第一个go程序</h3><ul><li>在<code>go</code>程序中新建三个文件夹分别是：<code>bin</code>(用来存放编译后生成的可执行文件)、<code>pkg</code>(用来存放编译后生成的归档文件)、<code>src</code>(用来存放源码文件)<ul><li>在<code>src</code>目录下创建一个<code>hello目录</code>，在<code>hello目录</code>中创建一个<code>main.go</code>文件：<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main          //声明main包，表名当前是一个可执行程序</span><br><span class="line"></span><br><span class="line">import &quot;fmt&quot;          //导入内置 fmt</span><br><span class="line"></span><br><span class="line">func main()&#123;  // main函数，是程序执行的入口</span><br><span class="line">    fmt.Println(&quot;Hello World!&quot;)  // 在终端打印 Hello World!</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习总结 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>mysql</title>
       <link href="/2023/04/27/mysql/"/>
       <url>/2023/04/27/mysql/</url>
